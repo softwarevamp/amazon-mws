@@ -5,5 +5,11 @@
             "name": "Revamp Software, Inc.",
             "email": "softwarevamp@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "classmap": ["src"],
+        "psr-0": {
+            "MarketplaceWebService" : "src/"
+        }
+    }
 }
