@@ -35,6 +35,7 @@
  * <li>EndDate: string</li>
  * <li>SubmittedDate: string</li>
  * <li>ReportProcessingStatus: string</li>
+ * <li>GeneratedReportId: string</li>
  *
  * </ul>
  */ 
@@ -56,6 +57,7 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
      * <li>EndDate: string</li>
      * <li>SubmittedDate: string</li>
      * <li>ReportProcessingStatus: string</li>
+     * <li>GeneratedReportId: string</li>
      *
      * </ul>
      */
@@ -69,6 +71,7 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
         'Scheduled' => array('FieldValue' => null, 'FieldType' => 'bool'),
         'SubmittedDate' => array('FieldValue' => null, 'FieldType' => 'DateTime'),
         'ReportProcessingStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
+        'GeneratedReportId' => array('FieldValue' => null, 'FieldType' => 'string'),
         );
         parent::__construct($data);
     }
@@ -389,6 +392,50 @@ class MarketplaceWebService_Model_ReportRequestInfo extends MarketplaceWebServic
         return !is_null($this->fields['ReportProcessingStatus']['FieldValue']);
     }
 
+    /**
+     * Gets the value of the GeneratedReportId property.
+     * 
+     * @return string GeneratedReportId
+     */
+    public function getGeneratedReportId() 
+    {
+        return $this->fields['GeneratedReportId']['FieldValue'];
+    }
+
+    /**
+     * Sets the value of the GeneratedReportId property.
+     * 
+     * @param string GeneratedReportId
+     * @return this instance
+     */
+    public function setGeneratedReportId($value) 
+    {
+        $this->fields['GeneratedReportId']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Sets the value of the GeneratedReportId and returns this instance
+     * 
+     * @param string $value GeneratedReportId
+     * @return MarketplaceWebService_Model_ReportRequestInfo instance
+     */
+    public function withGeneratedReportId($value)
+    {
+        $this->setGeneratedReportId($value);
+        return $this;
+    }
+
+
+    /**
+     * Checks if GeneratedReportId is set
+     * 
+     * @return bool true if GeneratedReportId  is set
+     */
+    public function isSetGeneratedReportId()
+    {
+        return !is_null($this->fields['GeneratedReportId']['FieldValue']);
+    }
 
 
 
